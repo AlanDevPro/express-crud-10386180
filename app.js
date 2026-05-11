@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+const unusedVariable = 'error';
+
 app.use(express.json());
 
 let products = [
