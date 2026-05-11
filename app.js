@@ -3,6 +3,8 @@ const express = require('express');
 
 const app = express();
 
+const errorLint = ;
+
 
 app.use(express.json());
 
