@@ -1,17 +1,25 @@
 {
   "name": "express-crud-10386180",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "API CRUD de productos con Express.js - Limachi Villarroel Alan Nicolás",
+  "main": "src/server.js",
   "scripts": {
-  "start": "node server.js",
-  "test": "jest",
-  "lint": "eslint .",
-  "coverage": "jest --coverage"
+    "start":      "node src/server.js",
+    "dev":        "nodemon src/server.js",
+    "test":       "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint":       "eslint src/ tests/",
+    "coverage":   "jest --coverage"
   },
-  "keywords": [],
-  "author": "",
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": ["**/tests/**/*.test.js"],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": ["src/**/*.js"]
+  },
+  "keywords": ["express", "crud", "api", "rest"],
+  "author": "Alan Nicolás Limachi Villarroel",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.2.1"
   },
@@ -20,6 +28,7 @@
     "eslint": "^10.3.0",
     "globals": "^17.6.0",
     "jest": "^30.4.2",
+    "nodemon": "^3.1.10",
     "supertest": "^7.2.2"
   }
 }
